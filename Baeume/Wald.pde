@@ -147,7 +147,7 @@ class Wald {
         minI=i;
       }
   
-      float ba=30; //float(baumAlter);
+      float ba=float(b.baumAlter);
       if(ba>0.0){
          cc++;
          av[round(ba/10.0)]++;        

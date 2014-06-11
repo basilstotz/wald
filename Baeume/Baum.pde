@@ -50,22 +50,13 @@ class Baum {
  }
  
  public void draw(float centerX,float centerY,float scale,float size,color col){
-      //if(scale<0.33)size*=2;
-      //if(scale>2)size/=3;
       size/=sqrt(scale);
       noStroke();
       fill(50,200,0);
-      //ellipse((lat-1268536.38)*s,(lon-2609987.165)*-s,2,2);
       pushMatrix();
       translate(displayWidth/4,displayHeight/4);
-      //scale(1.0);
-      //float px=lat-posX;
-      //float py=lon-posY;
-      //println(lat,lon,posX,posY,lat-posX,lon-posY);
       scale(scale,-scale);
       translate(-centerX,-centerY);
-      //rot+=0.0000001;
-      //rotate(rot);
       fill(col);
       ellipse(lat,lon,size,size);
       popMatrix();
